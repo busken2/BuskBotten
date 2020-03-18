@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 # Add project source
-WORKDIR /usr/src/musicbot
+WORKDIR /usr/src/buskbotten
 COPY . ./
 
 # Install dependencies
@@ -30,7 +30,7 @@ RUN apk update \
 && apk del .build-deps
 
 # Create volume for mapping the config
-VOLUME /usr/src/musicbot/config
+VOLUME /usr/src/buskbotten/config
 
 ENV APP_ENV=docker
 
