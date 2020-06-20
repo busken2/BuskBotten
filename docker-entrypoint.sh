@@ -11,4 +11,7 @@ fi
 	-e "s/%PREFIX%/$PREFIX/" \
 	> /musicbot/config/options.ini
 
+	cat /musicbot/config/example_aliases.json \
+	> /musicbot/config/aliases.json
+
 exec python3 run.py $@
